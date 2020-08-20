@@ -45,13 +45,6 @@
     {
       "polymorphic": false,
       "presence": true,
-      "name": "адресныйРеестр",
-      "relatedTo": "i-i-s-umnyjj-dom-адресный-реестр",
-      "inverse": null
-    },
-    {
-      "polymorphic": false,
-      "presence": true,
       "name": "собственник",
       "relatedTo": "i-i-s-umnyjj-dom-собственник",
       "inverse": null
@@ -102,20 +95,6 @@
           "caption": "Дом",
           "name": "дом",
           "relatedTo": "i-i-s-umnyjj-dom-дом",
-          "inverse": null
-        },
-        {
-          "lookupValue": null,
-          "lookupValueField": null,
-          "relationName": "АдресныйРеестр",
-          "belongsTo": [],
-          "hidden": false,
-          "attrs": [],
-          "index": 5,
-          "type": "default",
-          "caption": "Адресный реестр",
-          "name": "адресныйРеестр",
-          "relatedTo": "i-i-s-umnyjj-dom-адресный-реестр",
           "inverse": null
         },
         {

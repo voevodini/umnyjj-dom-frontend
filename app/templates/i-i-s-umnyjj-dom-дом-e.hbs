@@ -70,20 +70,4 @@
     }}
     {{flexberry-validationmessage error=(v-get validationObject "управляющаяКомпания.наименование" "messages")}}
   </div>
-  <div class="field">
-    <label>{{t "forms.i-i-s-umnyjj-dom-дом-e.адресныйРеестр-caption"}}</label>
-    {{flexberry-lookup
-      choose="showLookupDialog"
-      remove="removeLookupValue"
-      value=model.адресныйРеестр
-      relationName="адресныйРеестр"
-      projection="АдресныйРеестрL"
-      title=(t "forms.i-i-s-umnyjj-dom-дом-e.адресныйРеестр-caption")
-      readonly=readonly
-      componentName="адресныйРеестрLookup"
-      data-test-i-i-s-umnyjj-dom-дом-e---------------=true
-    }}
-    {{flexberry-validationmessage error=(v-get validationObject "адресныйРеестр" "messages")}}
-  </div>
-
 </form>

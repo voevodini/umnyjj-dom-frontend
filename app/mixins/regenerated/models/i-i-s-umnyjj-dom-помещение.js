@@ -9,7 +9,6 @@ export let Model = Mixin.create({
   типПомещения: DS.attr('string'),
   колвоПроживающих: DS.attr('string'),
   дом: DS.belongsTo('i-i-s-umnyjj-dom-дом', { inverse: null, async: false }),
-  адресныйРеестр: DS.belongsTo('i-i-s-umnyjj-dom-адресный-реестр', { inverse: null, async: false }),
   собственник: DS.belongsTo('i-i-s-umnyjj-dom-собственник', { inverse: null, async: false })
 });
 
@@ -40,13 +39,6 @@ export let ValidationRules = {
       validator('presence', true),
     ],
   },
-  адресныйРеестр: {
-    descriptionKey: 'models.i-i-s-umnyjj-dom-помещение.validations.адресныйРеестр.__caption__',
-    validators: [
-      validator('ds-error'),
-      validator('presence', true),
-    ],
-  },
   собственник: {
     descriptionKey: 'models.i-i-s-umnyjj-dom-помещение.validations.собственник.__caption__',
     validators: [
@@ -66,10 +58,7 @@ export let defineProjections = function (modelClass) {
     }, { index: 3 }),
     собственник: belongsTo('i-i-s-umnyjj-dom-собственник', 'Собственник', {
       фИО: attr('ФИО', { index: 7 })
-    }, { index: 6 }),
-    адресныйРеестр: belongsTo('i-i-s-umnyjj-dom-адресный-реестр', 'Адресный реестр', {
-
-    }, { index: 5 })
+    }, { index: 6 })
   });
 
   modelClass.defineProjection('ПомещениеL', 'i-i-s-umnyjj-dom-помещение', {

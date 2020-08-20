@@ -32,13 +32,6 @@
       "name": "управляющаяКомпания",
       "relatedTo": "i-i-s-umnyjj-dom-управляющая-компания",
       "inverse": null
-    },
-    {
-      "polymorphic": false,
-      "presence": true,
-      "name": "адресныйРеестр",
-      "relatedTo": "i-i-s-umnyjj-dom-адресный-реестр",
-      "inverse": null
     }
   ],
   "hasMany": [],
@@ -80,20 +73,6 @@
           "caption": "Управляющая компания",
           "name": "управляющаяКомпания",
           "relatedTo": "i-i-s-umnyjj-dom-управляющая-компания",
-          "inverse": null
-        },
-        {
-          "lookupValue": null,
-          "lookupValueField": null,
-          "relationName": "АдресныйРеестр",
-          "belongsTo": [],
-          "hidden": false,
-          "attrs": [],
-          "index": 4,
-          "type": "default",
-          "caption": "Адресный реестр",
-          "name": "адресныйРеестр",
-          "relatedTo": "i-i-s-umnyjj-dom-адресный-реестр",
           "inverse": null
         }
       ],

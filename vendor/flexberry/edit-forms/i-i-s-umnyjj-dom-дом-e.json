@@ -12,7 +12,7 @@
       "master": null,
       "displayAttributeName": null,
       "required": false,
-      "relationName": "АдресныйРеестр",
+      "relationName": null,
       "projection": "АдресныйРеестрL",
       "detailModelName": null
     }

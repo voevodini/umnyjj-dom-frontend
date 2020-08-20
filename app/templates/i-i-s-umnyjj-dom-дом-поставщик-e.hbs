@@ -24,56 +24,5 @@
       {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
     </div>
   </div>
-  <div class="field">
-    <label>{{t "forms.i-i-s-umnyjj-dom-дом-поставщик-e.дом-caption"}}</label>
-    {{flexberry-lookup
-      choose="showLookupDialog"
-      remove="removeLookupValue"
-      value=model.дом
-      relationName="дом"
-      projection="ДомL"
-      title=(t "forms.i-i-s-umnyjj-dom-дом-поставщик-e.дом-caption")
-      readonly=readonly
-      componentName="домLookup"
-      data-test-i-i-s-umnyjj-dom-дом-поставщик-e----=true
-    }}
-    {{flexberry-validationmessage error=(v-get validationObject "дом" "messages")}}
-  </div>
 
-  <div class="field">
-    {{flexberry-field
-      readonly=true
-      value=model.дом.address
-      class=(if (v-get validationObject "дом.address" "isInvalid") "error")
-      label=(t "forms.i-i-s-umnyjj-dom-дом-поставщик-e.дом.address-caption")
-      data-test-i-i-s-umnyjj-dom-дом-поставщик-e------------=true
-    }}
-    {{flexberry-validationmessage error=(v-get validationObject "дом.address" "messages")}}
-  </div>
-  <div class="field">
-    <label>{{t "forms.i-i-s-umnyjj-dom-дом-поставщик-e.поставщик-caption"}}</label>
-    {{flexberry-lookup
-      choose="showLookupDialog"
-      remove="removeLookupValue"
-      value=model.поставщик
-      relationName="поставщик"
-      projection="ПоставщикL"
-      title=(t "forms.i-i-s-umnyjj-dom-дом-поставщик-e.поставщик-caption")
-      readonly=readonly
-      componentName="поставщикLookup"
-      data-test-i-i-s-umnyjj-dom-дом-поставщик-e----------=true
-    }}
-    {{flexberry-validationmessage error=(v-get validationObject "поставщик" "messages")}}
-  </div>
-
-  <div class="field">
-    {{flexberry-field
-      readonly=true
-      value=model.поставщик.иНН
-      class=(if (v-get validationObject "поставщик.иНН" "isInvalid") "error")
-      label=(t "forms.i-i-s-umnyjj-dom-дом-поставщик-e.поставщик.иНН-caption")
-      data-test-i-i-s-umnyjj-dom-дом-поставщик-e--------------=true
-    }}
-    {{flexberry-validationmessage error=(v-get validationObject "поставщик.иНН" "messages")}}
-  </div>
 </form>
