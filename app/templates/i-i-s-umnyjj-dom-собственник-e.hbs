@@ -44,18 +44,4 @@
     }}
     {{flexberry-validationmessage error=(v-get validationObject "идТелеПлюс" "messages")}}
   </div>
-  <div class="field">
-    <label>{{t "forms.i-i-s-umnyjj-dom-собственник-e.помещениеСобственника-caption"}}</label>
-    {{flexberry-groupedit
-      componentName="помещениеСобственникаGroupEdit"
-      mainModelProjection=modelProjection
-      modelProjection=modelProjection.attributes.помещениеСобственника
-      content=model.помещениеСобственника
-      readonly=readonly
-      orderable=false
-      class=(if (v-get validationObject "помещениеСобственника" "isInvalid") "error")
-      data-test-i-i-s-umnyjj-dom-собственник-e----------------------=true
-    }}
-    {{flexberry-validationmessage error=(v-get validationObject "помещениеСобственника" "messages")}}
-  </div>
 </form>

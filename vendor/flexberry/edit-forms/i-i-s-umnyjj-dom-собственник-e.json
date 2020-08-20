@@ -1,14 +1,5 @@
 ﻿{
-  "propertyLookup": [
-    {
-      "master": "помещение",
-      "displayAttributeName": "типПомещения",
-      "required": true,
-      "relationName": "ПомещениеСобственника.Помещение",
-      "projection": "ПомещениеL",
-      "detailModelName": "i-i-s-umnyjj-dom-помещение-собственника"
-    }
-  ],
+  "propertyLookup": [],
   "external": false,
   "caption": "Собственник",
   "name": "IISUmnyjj_domСобственникE",

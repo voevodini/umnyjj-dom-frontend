@@ -26,13 +26,7 @@
     }
   ],
   "belongsTo": [],
-  "hasMany": [
-    {
-      "name": "помещениеСобственника",
-      "relatedTo": "i-i-s-umnyjj-dom-помещение-собственника",
-      "inverse": "собственник"
-    }
-  ],
+  "hasMany": [],
   "projections": [
     {
       "name": "СобственникE",
@@ -52,15 +46,7 @@
         }
       ],
       "belongsTo": [],
-      "hasMany": [
-        {
-          "projectionName": "ПомещениеСобственникаE",
-          "caption": "Помещение собственника",
-          "name": "помещениеСобственника",
-          "relatedTo": "i-i-s-umnyjj-dom-помещение-собственника",
-          "inverse": null
-        }
-      ]
+      "hasMany": []
     },
     {
       "name": "СобственникL",
