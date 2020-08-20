@@ -26,8 +26,8 @@
     },
     {
       "name": "датаНачала",
-      "type": "string",
-      "flexberryType": "date",
+      "type": "date",
+      "flexberryType": "DateTime",
       "notNull": false,
       "defaultValue": "",
       "stored": true,
@@ -35,8 +35,8 @@
     },
     {
       "name": "датаОкончания",
-      "type": "string",
-      "flexberryType": "date",
+      "type": "date",
+      "flexberryType": "DateTime",
       "notNull": false,
       "defaultValue": "",
       "stored": true,

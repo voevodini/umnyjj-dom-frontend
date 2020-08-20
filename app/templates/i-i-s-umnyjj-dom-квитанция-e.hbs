@@ -25,15 +25,19 @@
     </div>
   </div>
   <div class="field">
-    {{flexberry-field
+    <label>{{t "forms.i-i-s-umnyjj-dom-квитанция-e.дата-caption"}}</label>
+    {{
+      flexberry-simpledatetime
+      type="date"
+      placeholder=(t 'components.flexberry-datepicker.placeholder')
       readonly=readonly
       value=model.дата
       class=(if (v-get validationObject "дата" "isInvalid") "error")
-      label=(t "forms.i-i-s-umnyjj-dom-квитанция-e.дата-caption")
       data-test-i-i-s-umnyjj-dom-квитанция-e-----=true
     }}
     {{flexberry-validationmessage error=(v-get validationObject "дата" "messages")}}
   </div>
+
   <div class="field">
     {{flexberry-field
       readonly=readonly

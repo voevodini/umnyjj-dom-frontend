@@ -45,25 +45,33 @@
     {{flexberry-validationmessage error=(v-get validationObject "описание" "messages")}}
   </div>
   <div class="field">
-    {{flexberry-field
+    <label>{{t "forms.i-i-s-umnyjj-dom-тариф-e.датаНачала-caption"}}</label>
+    {{
+      flexberry-simpledatetime
+      type="date"
+      placeholder=(t 'components.flexberry-datepicker.placeholder')
       readonly=readonly
       value=model.датаНачала
       class=(if (v-get validationObject "датаНачала" "isInvalid") "error")
-      label=(t "forms.i-i-s-umnyjj-dom-тариф-e.датаНачала-caption")
       data-test-i-i-s-umnyjj-dom-тариф-e-----------=true
     }}
     {{flexberry-validationmessage error=(v-get validationObject "датаНачала" "messages")}}
   </div>
+
   <div class="field">
-    {{flexberry-field
+    <label>{{t "forms.i-i-s-umnyjj-dom-тариф-e.датаОкончания-caption"}}</label>
+    {{
+      flexberry-simpledatetime
+      type="date"
+      placeholder=(t 'components.flexberry-datepicker.placeholder')
       readonly=readonly
       value=model.датаОкончания
       class=(if (v-get validationObject "датаОкончания" "isInvalid") "error")
-      label=(t "forms.i-i-s-umnyjj-dom-тариф-e.датаОкончания-caption")
       data-test-i-i-s-umnyjj-dom-тариф-e--------------=true
     }}
     {{flexberry-validationmessage error=(v-get validationObject "датаОкончания" "messages")}}
   </div>
+
   <div class="field">
     {{flexberry-field
       readonly=readonly

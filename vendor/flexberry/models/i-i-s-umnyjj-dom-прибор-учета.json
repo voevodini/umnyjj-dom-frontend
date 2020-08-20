@@ -17,8 +17,8 @@
     },
     {
       "name": "датаУстановки",
-      "type": "string",
-      "flexberryType": "date",
+      "type": "date",
+      "flexberryType": "DateTime",
       "notNull": false,
       "defaultValue": "",
       "stored": true,
@@ -26,8 +26,8 @@
     },
     {
       "name": "датаСнятия",
-      "type": "string",
-      "flexberryType": "date",
+      "type": "date",
+      "flexberryType": "DateTime",
       "notNull": false,
       "defaultValue": "",
       "stored": true,

@@ -35,25 +35,33 @@
     {{flexberry-validationmessage error=(v-get validationObject "единица" "messages")}}
   </div>
   <div class="field">
-    {{flexberry-field
+    <label>{{t "forms.i-i-s-umnyjj-dom-прибор-учета-e.датаУстановки-caption"}}</label>
+    {{
+      flexberry-simpledatetime
+      type="date"
+      placeholder=(t 'components.flexberry-datepicker.placeholder')
       readonly=readonly
       value=model.датаУстановки
       class=(if (v-get validationObject "датаУстановки" "isInvalid") "error")
-      label=(t "forms.i-i-s-umnyjj-dom-прибор-учета-e.датаУстановки-caption")
       data-test-i-i-s-umnyjj-dom-прибор-учета-e--------------=true
     }}
     {{flexberry-validationmessage error=(v-get validationObject "датаУстановки" "messages")}}
   </div>
+
   <div class="field">
-    {{flexberry-field
+    <label>{{t "forms.i-i-s-umnyjj-dom-прибор-учета-e.датаСнятия-caption"}}</label>
+    {{
+      flexberry-simpledatetime
+      type="date"
+      placeholder=(t 'components.flexberry-datepicker.placeholder')
       readonly=readonly
       value=model.датаСнятия
       class=(if (v-get validationObject "датаСнятия" "isInvalid") "error")
-      label=(t "forms.i-i-s-umnyjj-dom-прибор-учета-e.датаСнятия-caption")
       data-test-i-i-s-umnyjj-dom-прибор-учета-e-----------=true
     }}
     {{flexberry-validationmessage error=(v-get validationObject "датаСнятия" "messages")}}
   </div>
+
   <div class="field">
     <label>{{t "forms.i-i-s-umnyjj-dom-прибор-учета-e.актуальность-caption"}}</label>
     {{flexberry-checkbox

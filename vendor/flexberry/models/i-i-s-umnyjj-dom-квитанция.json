@@ -8,8 +8,8 @@
   "attrs": [
     {
       "name": "дата",
-      "type": "string",
-      "flexberryType": "date",
+      "type": "date",
+      "flexberryType": "DateTime",
       "notNull": false,
       "defaultValue": "",
       "stored": true,

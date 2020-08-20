@@ -6,8 +6,8 @@ import { attr, belongsTo, hasMany } from 'ember-flexberry-data/utils/attributes'
 
 export let Model = Mixin.create({
   единица: DS.attr('string'),
-  датаУстановки: DS.attr('string'),
-  датаСнятия: DS.attr('string'),
+  датаУстановки: DS.attr('date'),
+  датаСнятия: DS.attr('date'),
   актуальность: DS.attr('boolean'),
   автоматическаяПередача: DS.attr('boolean'),
   модельПУ: DS.belongsTo('i-i-s-umnyjj-dom-модель-п-у', { inverse: null, async: false }),
@@ -25,12 +25,14 @@ export let ValidationRules = {
     descriptionKey: 'models.i-i-s-umnyjj-dom-прибор-учета.validations.датаУстановки.__caption__',
     validators: [
       validator('ds-error'),
+      validator('date'),
     ],
   },
   датаСнятия: {
     descriptionKey: 'models.i-i-s-umnyjj-dom-прибор-учета.validations.датаСнятия.__caption__',
     validators: [
       validator('ds-error'),
+      validator('date'),
     ],
   },
   актуальность: {
