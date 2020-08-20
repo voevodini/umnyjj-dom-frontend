@@ -1,0 +1,92 @@
+﻿{
+  "name": "IISUmnyjj_domПомещениеСобственника",
+  "modelName": "i-i-s-umnyjj-dom-помещение-собственника",
+  "className": "ПомещениеСобственника",
+  "nameSpace": "IIS.Umnyjj_dom",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "основнойСобственник",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "доляСобственности",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "помещение",
+      "relatedTo": "i-i-s-umnyjj-dom-помещение",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "собственник",
+      "relatedTo": "i-i-s-umnyjj-dom-собственник",
+      "inverse": "помещениеСобственника"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ПомещениеСобственникаE",
+      "modelName": "i-i-s-umnyjj-dom-помещение-собственника",
+      "attrs": [
+        {
+          "name": "основнойСобственник",
+          "caption": "Основной собственник",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "доляСобственности",
+          "caption": "Доля собственности",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "ТипПомещения",
+          "lookupValueField": "типПомещения",
+          "relationName": "Помещение",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "типПомещения",
+              "caption": "Тип помещения",
+              "hidden": true,
+              "index": 3
+            }
+          ],
+          "index": 2,
+          "type": "standard",
+          "caption": "Помещение",
+          "name": "помещение",
+          "relatedTo": "i-i-s-umnyjj-dom-помещение",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

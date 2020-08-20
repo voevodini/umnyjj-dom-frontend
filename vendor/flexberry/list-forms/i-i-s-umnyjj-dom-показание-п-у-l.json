@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-umnyjj-dom-показание-п-у-e",
+  "editForm": "i-i-s-umnyjj-dom-показание-п-у-e",
+  "external": false,
+  "caption": "Показание ПУ",
+  "name": "IISUmnyjj_domПоказаниеПУL",
+  "className": "ПоказаниеПУL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-umnyjj-dom-показание-п-у",
+      "modelProjection": "ПоказаниеПУL"
+    }
+  ]
+}

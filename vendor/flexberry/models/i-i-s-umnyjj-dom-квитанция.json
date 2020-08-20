@@ -1,0 +1,211 @@
+﻿{
+  "name": "IISUmnyjj_domКвитанция",
+  "modelName": "i-i-s-umnyjj-dom-квитанция",
+  "className": "Квитанция",
+  "nameSpace": "IIS.Umnyjj_dom",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "дата",
+      "type": "string",
+      "flexberryType": "date",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "idTelePlus",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "итого",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "помещение",
+      "relatedTo": "i-i-s-umnyjj-dom-помещение",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "управляющаяКомпания",
+      "relatedTo": "i-i-s-umnyjj-dom-управляющая-компания",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "строкаКвитанции",
+      "relatedTo": "i-i-s-umnyjj-dom-строка-квитанции",
+      "inverse": "квитанция"
+    }
+  ],
+  "projections": [
+    {
+      "name": "КвитанцияE",
+      "modelName": "i-i-s-umnyjj-dom-квитанция",
+      "attrs": [
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "idTelePlus",
+          "caption": "Id tele plus",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "итого",
+          "caption": "Итого",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Помещение",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "типПомещения",
+              "caption": "Тип помещения",
+              "hidden": false,
+              "index": 4
+            }
+          ],
+          "index": 3,
+          "type": "default",
+          "caption": "Помещение",
+          "name": "помещение",
+          "relatedTo": "i-i-s-umnyjj-dom-помещение",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "УправляющаяКомпания",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "наименование",
+              "caption": "Наименование",
+              "hidden": false,
+              "index": 6
+            }
+          ],
+          "index": 5,
+          "type": "default",
+          "caption": "Управляющая компания",
+          "name": "управляющаяКомпания",
+          "relatedTo": "i-i-s-umnyjj-dom-управляющая-компания",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "СтрокаКвитанцииE",
+          "caption": "Строка квитанции",
+          "name": "строкаКвитанции",
+          "relatedTo": "i-i-s-umnyjj-dom-строка-квитанции",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "КвитанцияL",
+      "modelName": "i-i-s-umnyjj-dom-квитанция",
+      "attrs": [
+        {
+          "name": "дата",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "idTelePlus",
+          "caption": "Id tele plus",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "итого",
+          "caption": "Итого",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Помещение",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "типПомещения",
+              "caption": "Тип помещения",
+              "hidden": false,
+              "index": 3
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Тип помещения",
+          "name": "помещение",
+          "relatedTo": "i-i-s-umnyjj-dom-помещение",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "УправляющаяКомпания",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "наименование",
+              "caption": "Наименование",
+              "hidden": false,
+              "index": 4
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Наименование",
+          "name": "управляющаяКомпания",
+          "relatedTo": "i-i-s-umnyjj-dom-управляющая-компания",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

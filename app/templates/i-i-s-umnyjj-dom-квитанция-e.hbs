@@ -1,0 +1,123 @@
+<h3 class="ui header">{{t "forms.i-i-s-umnyjj-dom-квитанция-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.дата
+      class=(if (v-get validationObject "дата" "isInvalid") "error")
+      label=(t "forms.i-i-s-umnyjj-dom-квитанция-e.дата-caption")
+      data-test-i-i-s-umnyjj-dom-квитанция-e-----=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "дата" "messages")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.idTelePlus
+      class=(if (v-get validationObject "idTelePlus" "isInvalid") "error")
+      label=(t "forms.i-i-s-umnyjj-dom-квитанция-e.idTelePlus-caption")
+      data-test-i-i-s-umnyjj-dom-квитанция-e-----------=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "idTelePlus" "messages")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.итого
+      class=(if (v-get validationObject "итого" "isInvalid") "error")
+      label=(t "forms.i-i-s-umnyjj-dom-квитанция-e.итого-caption")
+      data-test-i-i-s-umnyjj-dom-квитанция-e------=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "итого" "messages")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-umnyjj-dom-квитанция-e.помещение-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.помещение
+      relationName="помещение"
+      projection="ПомещениеL"
+      title=(t "forms.i-i-s-umnyjj-dom-квитанция-e.помещение-caption")
+      readonly=readonly
+      componentName="помещениеLookup"
+      data-test-i-i-s-umnyjj-dom-квитанция-e----------=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "помещение" "messages")}}
+  </div>
+
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.помещение.типПомещения
+      class=(if (v-get validationObject "помещение.типПомещения" "isInvalid") "error")
+      label=(t "forms.i-i-s-umnyjj-dom-квитанция-e.помещение.типПомещения-caption")
+      data-test-i-i-s-umnyjj-dom-квитанция-e-----------------------=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "помещение.типПомещения" "messages")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-umnyjj-dom-квитанция-e.управляющаяКомпания-caption"}}</label>
+    {{flexberry-lookup
+      choose="showLookupDialog"
+      remove="removeLookupValue"
+      value=model.управляющаяКомпания
+      relationName="управляющаяКомпания"
+      projection="УправляющаяКомпанияL"
+      title=(t "forms.i-i-s-umnyjj-dom-квитанция-e.управляющаяКомпания-caption")
+      readonly=readonly
+      componentName="управляющаяКомпанияLookup"
+      data-test-i-i-s-umnyjj-dom-квитанция-e--------------------=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "управляющаяКомпания" "messages")}}
+  </div>
+
+  <div class="field">
+    {{flexberry-field
+      readonly=true
+      value=model.управляющаяКомпания.наименование
+      class=(if (v-get validationObject "управляющаяКомпания.наименование" "isInvalid") "error")
+      label=(t "forms.i-i-s-umnyjj-dom-квитанция-e.управляющаяКомпания.наименование-caption")
+      data-test-i-i-s-umnyjj-dom-квитанция-e---------------------------------=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "управляющаяКомпания.наименование" "messages")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-umnyjj-dom-квитанция-e.строкаКвитанции-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="строкаКвитанцииGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.строкаКвитанции
+      content=model.строкаКвитанции
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationObject "строкаКвитанции" "isInvalid") "error")
+      data-test-i-i-s-umnyjj-dom-квитанция-e----------------=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "строкаКвитанции" "messages")}}
+  </div>
+</form>

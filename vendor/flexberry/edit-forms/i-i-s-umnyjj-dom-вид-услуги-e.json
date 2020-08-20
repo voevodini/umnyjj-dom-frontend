@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Вид услуги",
+  "name": "IISUmnyjj_domВидУслугиE",
+  "className": "ВидУслугиE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-umnyjj-dom-вид-услуги",
+      "modelProjection": "ВидУслугиE"
+    }
+  ]
+}

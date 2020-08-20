@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Адресный реестр",
+  "name": "IISUmnyjj_domАдресныйРеестрE",
+  "className": "АдресныйРеестрE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-umnyjj-dom-адресный-реестр",
+      "modelProjection": "АдресныйРеестрE"
+    }
+  ]
+}

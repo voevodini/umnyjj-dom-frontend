@@ -1,0 +1,39 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Дом",
+      "projection": "ДомL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "АдресныйРеестр",
+      "projection": "АдресныйРеестрL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Собственник",
+      "projection": "СобственникL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Помещение",
+  "name": "IISUmnyjj_domПомещениеE",
+  "className": "ПомещениеE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-umnyjj-dom-помещение",
+      "modelProjection": "ПомещениеE"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-umnyjj-dom-адресный-реестр-e",
+  "editForm": "i-i-s-umnyjj-dom-адресный-реестр-e",
+  "external": false,
+  "caption": "Адресный реестр",
+  "name": "IISUmnyjj_domАдресныйРеестрL",
+  "className": "АдресныйРеестрL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-umnyjj-dom-адресный-реестр",
+      "modelProjection": "АдресныйРеестрL"
+    }
+  ]
+}

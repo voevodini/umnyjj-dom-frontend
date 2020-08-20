@@ -1,0 +1,131 @@
+﻿{
+  "name": "IISUmnyjj_domДомПоставщик",
+  "modelName": "i-i-s-umnyjj-dom-дом-поставщик",
+  "className": "ДомПоставщик",
+  "nameSpace": "IIS.Umnyjj_dom",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "дом",
+      "relatedTo": "i-i-s-umnyjj-dom-дом",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "поставщик",
+      "relatedTo": "i-i-s-umnyjj-dom-поставщик",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ДомПоставщикE",
+      "modelName": "i-i-s-umnyjj-dom-дом-поставщик",
+      "attrs": [],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Дом",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "address",
+              "caption": "Address",
+              "hidden": false,
+              "index": 1
+            }
+          ],
+          "index": 0,
+          "type": "default",
+          "caption": "Дом",
+          "name": "дом",
+          "relatedTo": "i-i-s-umnyjj-dom-дом",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Поставщик",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "иНН",
+              "caption": "ИНН",
+              "hidden": false,
+              "index": 3
+            }
+          ],
+          "index": 2,
+          "type": "default",
+          "caption": "Поставщик",
+          "name": "поставщик",
+          "relatedTo": "i-i-s-umnyjj-dom-поставщик",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "ДомПоставщикL",
+      "modelName": "i-i-s-umnyjj-dom-дом-поставщик",
+      "attrs": [],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Дом",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "address",
+              "caption": "Address",
+              "hidden": false,
+              "index": 0
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Address",
+          "name": "дом",
+          "relatedTo": "i-i-s-umnyjj-dom-дом",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Поставщик",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "иНН",
+              "caption": "ИНН",
+              "hidden": false,
+              "index": 1
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "ИНН",
+          "name": "поставщик",
+          "relatedTo": "i-i-s-umnyjj-dom-поставщик",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-umnyjj-dom-помещение-e",
+  "editForm": "i-i-s-umnyjj-dom-помещение-e",
+  "external": false,
+  "caption": "Помещение",
+  "name": "IISUmnyjj_domПомещениеL",
+  "className": "ПомещениеL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-umnyjj-dom-помещение",
+      "modelProjection": "ПомещениеL"
+    }
+  ]
+}

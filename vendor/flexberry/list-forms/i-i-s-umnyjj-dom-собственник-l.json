@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-umnyjj-dom-собственник-e",
+  "editForm": "i-i-s-umnyjj-dom-собственник-e",
+  "external": false,
+  "caption": "Собственник",
+  "name": "IISUmnyjj_domСобственникL",
+  "className": "СобственникL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-umnyjj-dom-собственник",
+      "modelProjection": "СобственникL"
+    }
+  ]
+}

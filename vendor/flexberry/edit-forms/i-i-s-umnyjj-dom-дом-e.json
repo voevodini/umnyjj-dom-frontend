@@ -1,0 +1,31 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "УправляющаяКомпания",
+      "projection": "УправляющаяКомпанияL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "АдресныйРеестр",
+      "projection": "АдресныйРеестрL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Дом",
+  "name": "IISUmnyjj_domДомE",
+  "className": "ДомE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-umnyjj-dom-дом",
+      "modelProjection": "ДомE"
+    }
+  ]
+}

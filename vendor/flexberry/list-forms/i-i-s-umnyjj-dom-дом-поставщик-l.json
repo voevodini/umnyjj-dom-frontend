@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "i-i-s-umnyjj-dom-дом-поставщик-e",
+  "editForm": "i-i-s-umnyjj-dom-дом-поставщик-e",
+  "external": false,
+  "caption": "Дом поставщик",
+  "name": "IISUmnyjj_domДомПоставщикL",
+  "className": "ДомПоставщикL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-umnyjj-dom-дом-поставщик",
+      "modelProjection": "ДомПоставщикL"
+    }
+  ]
+}

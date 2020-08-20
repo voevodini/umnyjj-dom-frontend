@@ -1,0 +1,61 @@
+<h3 class="ui header">{{t "forms.i-i-s-umnyjj-dom-собственник-e.caption"}}</h3>
+
+<form class="ui form flexberry-vertical-form" role="form">
+  {{flexberry-error error=error}}
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button class="ui button save-button" {{action "save"}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button class="ui button save-del-button" {{action "delete"}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button class="ui button close-button" {{action "close"}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field flexberry-validationsummary-container">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=(v-get validationObject "messages")}}
+    </div>
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.фИО
+      class=(if (v-get validationObject "фИО" "isInvalid") "error")
+      label=(t "forms.i-i-s-umnyjj-dom-собственник-e.фИО-caption")
+      data-test-i-i-s-umnyjj-dom-собственник-e----=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "фИО" "messages")}}
+  </div>
+  <div class="field">
+    {{flexberry-field
+      readonly=readonly
+      value=model.идТелеПлюс
+      class=(if (v-get validationObject "идТелеПлюс" "isInvalid") "error")
+      label=(t "forms.i-i-s-umnyjj-dom-собственник-e.идТелеПлюс-caption")
+      data-test-i-i-s-umnyjj-dom-собственник-e-----------=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "идТелеПлюс" "messages")}}
+  </div>
+  <div class="field">
+    <label>{{t "forms.i-i-s-umnyjj-dom-собственник-e.помещениеСобственника-caption"}}</label>
+    {{flexberry-groupedit
+      componentName="помещениеСобственникаGroupEdit"
+      mainModelProjection=modelProjection
+      modelProjection=modelProjection.attributes.помещениеСобственника
+      content=model.помещениеСобственника
+      readonly=readonly
+      orderable=false
+      class=(if (v-get validationObject "помещениеСобственника" "isInvalid") "error")
+      data-test-i-i-s-umnyjj-dom-собственник-e----------------------=true
+    }}
+    {{flexberry-validationmessage error=(v-get validationObject "помещениеСобственника" "messages")}}
+  </div>
+</form>

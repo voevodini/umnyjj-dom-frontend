@@ -1,0 +1,31 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "МодельПУ",
+      "projection": "МодельПУL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Помещение",
+      "projection": "ПомещениеL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Прибор учета",
+  "name": "IISUmnyjj_domПриборУчетаE",
+  "className": "ПриборУчетаE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-umnyjj-dom-прибор-учета",
+      "modelProjection": "ПриборУчетаE"
+    }
+  ]
+}

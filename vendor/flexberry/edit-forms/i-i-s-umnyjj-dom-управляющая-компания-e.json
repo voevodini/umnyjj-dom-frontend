@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Управляющая компания",
+  "name": "IISUmnyjj_domУправляющаяКомпанияE",
+  "className": "УправляющаяКомпанияE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-umnyjj-dom-управляющая-компания",
+      "modelProjection": "УправляющаяКомпанияE"
+    }
+  ]
+}

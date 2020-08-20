@@ -1,0 +1,47 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Помещение",
+      "projection": "ПомещениеL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "УправляющаяКомпания",
+      "projection": "УправляющаяКомпанияL",
+      "detailModelName": null
+    },
+    {
+      "master": "показаниеПУ",
+      "displayAttributeName": "значение",
+      "required": true,
+      "relationName": "СтрокаКвитанции.ПоказаниеПУ",
+      "projection": "ПоказаниеПУL",
+      "detailModelName": "i-i-s-umnyjj-dom-строка-квитанции"
+    },
+    {
+      "master": "тариф",
+      "displayAttributeName": "наименование",
+      "required": true,
+      "relationName": "СтрокаКвитанции.Тариф",
+      "projection": "ТарифL",
+      "detailModelName": "i-i-s-umnyjj-dom-строка-квитанции"
+    }
+  ],
+  "external": false,
+  "caption": "Квитанция",
+  "name": "IISUmnyjj_domКвитанцияE",
+  "className": "КвитанцияE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "i-i-s-umnyjj-dom-квитанция",
+      "modelProjection": "КвитанцияE"
+    }
+  ]
+}
