@@ -44,30 +44,4 @@
     }}
     {{flexberry-validationmessage error=(v-get validationObject "summS" "messages")}}
   </div>
-  <div class="field">
-    <label>{{t "forms.i-i-s-umnyjj-dom-дом-e.управляющаяКомпания-caption"}}</label>
-    {{flexberry-lookup
-      choose="showLookupDialog"
-      remove="removeLookupValue"
-      value=model.управляющаяКомпания
-      relationName="управляющаяКомпания"
-      projection="УправляющаяКомпанияL"
-      title=(t "forms.i-i-s-umnyjj-dom-дом-e.управляющаяКомпания-caption")
-      readonly=readonly
-      componentName="управляющаяКомпанияLookup"
-      data-test-i-i-s-umnyjj-dom-дом-e--------------------=true
-    }}
-    {{flexberry-validationmessage error=(v-get validationObject "управляющаяКомпания" "messages")}}
-  </div>
-
-  <div class="field">
-    {{flexberry-field
-      readonly=true
-      value=model.управляющаяКомпания.наименование
-      class=(if (v-get validationObject "управляющаяКомпания.наименование" "isInvalid") "error")
-      label=(t "forms.i-i-s-umnyjj-dom-дом-e.управляющаяКомпания.наименование-caption")
-      data-test-i-i-s-umnyjj-dom-дом-e---------------------------------=true
-    }}
-    {{flexberry-validationmessage error=(v-get validationObject "управляющаяКомпания.наименование" "messages")}}
-  </div>
 </form>

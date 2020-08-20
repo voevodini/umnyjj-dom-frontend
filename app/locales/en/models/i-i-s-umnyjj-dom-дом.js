@@ -39,6 +39,9 @@ export default {
     summS: {
       __caption__: 'summS'
     },
+    уК: {
+      __caption__: 'уК'
+    },
     управляющаяКомпания: {
       __caption__: 'управляющаяКомпания'
     },

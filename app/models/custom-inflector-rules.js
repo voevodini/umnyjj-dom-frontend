@@ -16,5 +16,6 @@ inflector.irregular('учета', 'Учетаs');
 inflector.irregular('тариф', 'Тарифs');
 inflector.irregular('дом', 'Домs');
 inflector.irregular('у', 'Уs');
+inflector.irregular('к', 'Кs');
 
 export default {};

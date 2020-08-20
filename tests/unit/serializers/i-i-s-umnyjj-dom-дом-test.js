@@ -24,6 +24,7 @@ moduleForModel('i-i-s-umnyjj-dom-дом', 'Unit | Serializer | i-i-s-umnyjj-dom-
     'model:i-i-s-umnyjj-dom-сотрудник',
     'model:i-i-s-umnyjj-dom-строка-квитанции',
     'model:i-i-s-umnyjj-dom-тариф',
+    'model:i-i-s-umnyjj-dom-у-к',
     'model:i-i-s-umnyjj-dom-управляющая-компания',
     'validator:ds-error',
     'validator:presence',

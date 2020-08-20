@@ -44,6 +44,7 @@ import IISUmnyjj_domСобственникModel from './models/i-i-s-umnyjj-dom-
 import IISUmnyjj_domСотрудникModel from './models/i-i-s-umnyjj-dom-сотрудник';
 import IISUmnyjj_domСтрокаКвитанцииModel from './models/i-i-s-umnyjj-dom-строка-квитанции';
 import IISUmnyjj_domТарифModel from './models/i-i-s-umnyjj-dom-тариф';
+import IISUmnyjj_domУКModel from './models/i-i-s-umnyjj-dom-у-к';
 import IISUmnyjj_domУправляющаяКомпанияModel from './models/i-i-s-umnyjj-dom-управляющая-компания';
 
 const translations = {};
@@ -66,6 +67,7 @@ $.extend(true, translations, {
     'i-i-s-umnyjj-dom-сотрудник': IISUmnyjj_domСотрудникModel,
     'i-i-s-umnyjj-dom-строка-квитанции': IISUmnyjj_domСтрокаКвитанцииModel,
     'i-i-s-umnyjj-dom-тариф': IISUmnyjj_domТарифModel,
+    'i-i-s-umnyjj-dom-у-к': IISUmnyjj_domУКModel,
     'i-i-s-umnyjj-dom-управляющая-компания': IISUmnyjj_domУправляющаяКомпанияModel
   },
 

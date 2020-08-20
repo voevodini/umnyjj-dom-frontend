@@ -7,7 +7,7 @@ import { attr, belongsTo, hasMany } from 'ember-flexberry-data/utils/attributes'
 export let Model = Mixin.create({
   address: DS.attr('string'),
   summS: DS.attr('number'),
-  управляющаяКомпания: DS.belongsTo('i-i-s-umnyjj-dom-управляющая-компания', { inverse: null, async: false })
+  уК: DS.belongsTo('i-i-s-umnyjj-dom-у-к', { inverse: null, async: false })
 });
 
 export let ValidationRules = {
@@ -24,8 +24,8 @@ export let ValidationRules = {
       validator('number', { allowString: true, allowBlank: true, integer: true }),
     ],
   },
-  управляющаяКомпания: {
-    descriptionKey: 'models.i-i-s-umnyjj-dom-дом.validations.управляющаяКомпания.__caption__',
+  уК: {
+    descriptionKey: 'models.i-i-s-umnyjj-dom-дом.validations.уК.__caption__',
     validators: [
       validator('ds-error'),
       validator('presence', true),
@@ -36,17 +36,11 @@ export let ValidationRules = {
 export let defineProjections = function (modelClass) {
   modelClass.defineProjection('ДомE', 'i-i-s-umnyjj-dom-дом', {
     address: attr('Address', { index: 0 }),
-    summS: attr('Summ S', { index: 1 }),
-    управляющаяКомпания: belongsTo('i-i-s-umnyjj-dom-управляющая-компания', 'Управляющая компания', {
-      наименование: attr('Наименование', { index: 3 })
-    }, { index: 2 })
+    summS: attr('Summ S', { index: 1 })
   });
 
   modelClass.defineProjection('ДомL', 'i-i-s-umnyjj-dom-дом', {
     address: attr('Address', { index: 0 }),
-    summS: attr('Summ S', { index: 1 }),
-    управляющаяКомпания: belongsTo('i-i-s-umnyjj-dom-управляющая-компания', 'Наименование', {
-      наименование: attr('Наименование', { index: 2 })
-    }, { index: -1, hidden: true })
+    summS: attr('Summ S', { index: 1 })
   });
 };

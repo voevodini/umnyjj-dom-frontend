@@ -4,7 +4,7 @@
       "master": null,
       "displayAttributeName": null,
       "required": false,
-      "relationName": "УправляющаяКомпания",
+      "relationName": null,
       "projection": "УправляющаяКомпанияL",
       "detailModelName": null
     }

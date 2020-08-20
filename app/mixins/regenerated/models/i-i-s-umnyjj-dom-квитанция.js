@@ -9,7 +9,7 @@ export let Model = Mixin.create({
   idTelePlus: DS.attr('number'),
   итого: DS.attr('string'),
   помещение: DS.belongsTo('i-i-s-umnyjj-dom-помещение', { inverse: null, async: false }),
-  управляющаяКомпания: DS.belongsTo('i-i-s-umnyjj-dom-управляющая-компания', { inverse: null, async: false }),
+  уК: DS.belongsTo('i-i-s-umnyjj-dom-у-к', { inverse: null, async: false }),
   строкаКвитанции: DS.hasMany('i-i-s-umnyjj-dom-строка-квитанции', { inverse: 'квитанция', async: false })
 });
 
@@ -41,8 +41,8 @@ export let ValidationRules = {
       validator('presence', true),
     ],
   },
-  управляющаяКомпания: {
-    descriptionKey: 'models.i-i-s-umnyjj-dom-квитанция.validations.управляющаяКомпания.__caption__',
+  уК: {
+    descriptionKey: 'models.i-i-s-umnyjj-dom-квитанция.validations.уК.__caption__',
     validators: [
       validator('ds-error'),
       validator('presence', true),
@@ -65,9 +65,6 @@ export let defineProjections = function (modelClass) {
     помещение: belongsTo('i-i-s-umnyjj-dom-помещение', 'Помещение', {
       типПомещения: attr('Тип помещения', { index: 4 })
     }, { index: 3 }),
-    управляющаяКомпания: belongsTo('i-i-s-umnyjj-dom-управляющая-компания', 'Управляющая компания', {
-      наименование: attr('Наименование', { index: 6 })
-    }, { index: 5 }),
     строкаКвитанции: hasMany('i-i-s-umnyjj-dom-строка-квитанции', 'Строка квитанции', {
       расход: attr('Расход', { index: 0 }),
       единица: attr('Единица', { index: 1 }),
@@ -89,9 +86,6 @@ export let defineProjections = function (modelClass) {
     итого: attr('Итого', { index: 2 }),
     помещение: belongsTo('i-i-s-umnyjj-dom-помещение', 'Тип помещения', {
       типПомещения: attr('Тип помещения', { index: 3 })
-    }, { index: -1, hidden: true }),
-    управляющаяКомпания: belongsTo('i-i-s-umnyjj-dom-управляющая-компания', 'Наименование', {
-      наименование: attr('Наименование', { index: 4 })
     }, { index: -1, hidden: true })
   });
 };
