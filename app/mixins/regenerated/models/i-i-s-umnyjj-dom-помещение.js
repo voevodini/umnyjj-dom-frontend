@@ -7,7 +7,7 @@ import { attr, belongsTo, hasMany } from 'ember-flexberry-data/utils/attributes'
 export let Model = Mixin.create({
   площадь: DS.attr('number'),
   типПомещения: DS.attr('string'),
-  колвоПроживающих: DS.attr('string'),
+  колвопр: DS.attr('string'),
   дом: DS.belongsTo('i-i-s-umnyjj-dom-дом', { inverse: null, async: false }),
   собственник: DS.belongsTo('i-i-s-umnyjj-dom-собственник', { inverse: null, async: false })
 });
@@ -26,8 +26,8 @@ export let ValidationRules = {
       validator('ds-error'),
     ],
   },
-  колвоПроживающих: {
-    descriptionKey: 'models.i-i-s-umnyjj-dom-помещение.validations.колвоПроживающих.__caption__',
+  колвопр: {
+    descriptionKey: 'models.i-i-s-umnyjj-dom-помещение.validations.колвопр.__caption__',
     validators: [
       validator('ds-error'),
     ],
@@ -51,25 +51,11 @@ export let ValidationRules = {
 export let defineProjections = function (modelClass) {
   modelClass.defineProjection('ПомещениеE', 'i-i-s-umnyjj-dom-помещение', {
     площадь: attr('Площадь', { index: 0 }),
-    типПомещения: attr('Тип помещения', { index: 1 }),
-    колвоПроживающих: attr('Колво проживающих', { index: 2 }),
-    дом: belongsTo('i-i-s-umnyjj-dom-дом', 'Дом', {
-      address: attr('Address', { index: 4 })
-    }, { index: 3 }),
-    собственник: belongsTo('i-i-s-umnyjj-dom-собственник', 'Собственник', {
-      фИО: attr('ФИО', { index: 7 })
-    }, { index: 6 })
+    типПомещения: attr('Тип помещения', { index: 1 })
   });
 
   modelClass.defineProjection('ПомещениеL', 'i-i-s-umnyjj-dom-помещение', {
     площадь: attr('Площадь', { index: 0 }),
-    типПомещения: attr('Тип помещения', { index: 1 }),
-    колвоПроживающих: attr('Колво проживающих', { index: 2 }),
-    дом: belongsTo('i-i-s-umnyjj-dom-дом', 'Address', {
-      address: attr('Address', { index: 3 })
-    }, { index: -1, hidden: true }),
-    собственник: belongsTo('i-i-s-umnyjj-dom-собственник', 'ФИО', {
-      фИО: attr('ФИО', { index: 4 })
-    }, { index: -1, hidden: true })
+    типПомещения: attr('Тип помещения', { index: 1 })
   });
 };

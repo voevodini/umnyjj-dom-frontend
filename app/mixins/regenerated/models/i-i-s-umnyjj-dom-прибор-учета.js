@@ -9,7 +9,7 @@ export let Model = Mixin.create({
   датаУстановки: DS.attr('date'),
   датаСнятия: DS.attr('date'),
   актуальность: DS.attr('boolean'),
-  автоматическаяПередача: DS.attr('boolean'),
+  автоПередача: DS.attr('boolean'),
   модельПУ: DS.belongsTo('i-i-s-umnyjj-dom-модель-п-у', { inverse: null, async: false }),
   помещение: DS.belongsTo('i-i-s-umnyjj-dom-помещение', { inverse: null, async: false })
 });
@@ -41,8 +41,8 @@ export let ValidationRules = {
       validator('ds-error'),
     ],
   },
-  автоматическаяПередача: {
-    descriptionKey: 'models.i-i-s-umnyjj-dom-прибор-учета.validations.автоматическаяПередача.__caption__',
+  автоПередача: {
+    descriptionKey: 'models.i-i-s-umnyjj-dom-прибор-учета.validations.автоПередача.__caption__',
     validators: [
       validator('ds-error'),
     ],
@@ -68,27 +68,13 @@ export let defineProjections = function (modelClass) {
     единица: attr('Единица', { index: 0 }),
     датаУстановки: attr('Дата установки', { index: 1 }),
     датаСнятия: attr('Дата снятия', { index: 2 }),
-    актуальность: attr('Актуальность', { index: 3 }),
-    автоматическаяПередача: attr('Автоматическая передача', { index: 4 }),
-    модельПУ: belongsTo('i-i-s-umnyjj-dom-модель-п-у', 'Модель ПУ', {
-      наименование: attr('Наименование', { index: 6 })
-    }, { index: 5 }),
-    помещение: belongsTo('i-i-s-umnyjj-dom-помещение', 'Помещение', {
-      типПомещения: attr('Тип помещения', { index: 8 })
-    }, { index: 7 })
+    актуальность: attr('Актуальность', { index: 3 })
   });
 
   modelClass.defineProjection('ПриборУчетаL', 'i-i-s-umnyjj-dom-прибор-учета', {
     единица: attr('Единица', { index: 0 }),
     датаУстановки: attr('Дата установки', { index: 1 }),
     датаСнятия: attr('Дата снятия', { index: 2 }),
-    актуальность: attr('Актуальность', { index: 3 }),
-    автоматическаяПередача: attr('Автоматическая передача', { index: 4 }),
-    модельПУ: belongsTo('i-i-s-umnyjj-dom-модель-п-у', 'Наименование', {
-      наименование: attr('Наименование', { index: 5 })
-    }, { index: -1, hidden: true }),
-    помещение: belongsTo('i-i-s-umnyjj-dom-помещение', 'Тип помещения', {
-      типПомещения: attr('Тип помещения', { index: 6 })
-    }, { index: -1, hidden: true })
+    актуальность: attr('Актуальность', { index: 3 })
   });
 };

@@ -48,40 +48,4 @@
     {{flexberry-validationmessage error=(v-get validationObject "дата" "messages")}}
   </div>
 
-  <div class="field">
-    <label>{{t "forms.i-i-s-umnyjj-dom-показание-п-у-e.полученоАвтоматически-caption"}}</label>
-    {{flexberry-checkbox
-      readonly=readonly
-      value=model.полученоАвтоматически
-      data-test-i-i-s-umnyjj-dom-показание-п-у-e----------------------=true
-    }}
-    {{flexberry-validationmessage error=(v-get validationObject "полученоАвтоматически" "messages")}}
-  </div>
-
-  <div class="field">
-    <label>{{t "forms.i-i-s-umnyjj-dom-показание-п-у-e.приборУчета-caption"}}</label>
-    {{flexberry-lookup
-      choose="showLookupDialog"
-      remove="removeLookupValue"
-      value=model.приборУчета
-      relationName="приборУчета"
-      projection="ПриборУчетаL"
-      title=(t "forms.i-i-s-umnyjj-dom-показание-п-у-e.приборУчета-caption")
-      readonly=readonly
-      componentName="приборУчетаLookup"
-      data-test-i-i-s-umnyjj-dom-показание-п-у-e------------=true
-    }}
-    {{flexberry-validationmessage error=(v-get validationObject "приборУчета" "messages")}}
-  </div>
-
-  <div class="field">
-    {{flexberry-field
-      readonly=true
-      value=model.приборУчета.единица
-      class=(if (v-get validationObject "приборУчета.единица" "isInvalid") "error")
-      label=(t "forms.i-i-s-umnyjj-dom-показание-п-у-e.приборУчета.единица-caption")
-      data-test-i-i-s-umnyjj-dom-показание-п-у-e--------------------=true
-    }}
-    {{flexberry-validationmessage error=(v-get validationObject "приборУчета.единица" "messages")}}
-  </div>
 </form>

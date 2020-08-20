@@ -25,7 +25,7 @@
       "ordered": false
     },
     {
-      "name": "полученоАвтоматически",
+      "name": "полученоАвто",
       "type": "boolean",
       "flexberryType": "bool",
       "notNull": false,
@@ -60,37 +60,9 @@
           "caption": "Дата",
           "hidden": false,
           "index": 1
-        },
-        {
-          "name": "полученоАвтоматически",
-          "caption": "Получено автоматически",
-          "hidden": false,
-          "index": 2
         }
       ],
-      "belongsTo": [
-        {
-          "lookupValue": null,
-          "lookupValueField": null,
-          "relationName": "ПриборУчета",
-          "belongsTo": [],
-          "hidden": false,
-          "attrs": [
-            {
-              "name": "единица",
-              "caption": "Единица",
-              "hidden": false,
-              "index": 4
-            }
-          ],
-          "index": 3,
-          "type": "default",
-          "caption": "Прибор учета",
-          "name": "приборУчета",
-          "relatedTo": "i-i-s-umnyjj-dom-прибор-учета",
-          "inverse": null
-        }
-      ],
+      "belongsTo": [],
       "hasMany": []
     },
     {
@@ -108,37 +80,9 @@
           "caption": "Дата",
           "hidden": false,
           "index": 1
-        },
-        {
-          "name": "полученоАвтоматически",
-          "caption": "Получено автоматически",
-          "hidden": false,
-          "index": 2
         }
       ],
-      "belongsTo": [
-        {
-          "lookupValue": null,
-          "lookupValueField": null,
-          "relationName": "ПриборУчета",
-          "belongsTo": [],
-          "hidden": false,
-          "attrs": [
-            {
-              "name": "единица",
-              "caption": "Единица",
-              "hidden": false,
-              "index": 3
-            }
-          ],
-          "index": -1,
-          "type": "default",
-          "caption": "Единица",
-          "name": "приборУчета",
-          "relatedTo": "i-i-s-umnyjj-dom-прибор-учета",
-          "inverse": null
-        }
-      ],
+      "belongsTo": [],
       "hasMany": []
     }
   ],

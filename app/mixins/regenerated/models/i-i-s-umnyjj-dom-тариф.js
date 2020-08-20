@@ -8,7 +8,7 @@ export let Model = Mixin.create({
   наименование: DS.attr('string'),
   описание: DS.attr('string'),
   датаНачала: DS.attr('date'),
-  датаОкончания: DS.attr('date'),
+  датаОкон: DS.attr('date'),
   единица: DS.attr('string'),
   формула: DS.attr('string'),
   стоимость: DS.attr('string'),
@@ -36,8 +36,8 @@ export let ValidationRules = {
       validator('date'),
     ],
   },
-  датаОкончания: {
-    descriptionKey: 'models.i-i-s-umnyjj-dom-тариф.validations.датаОкончания.__caption__',
+  датаОкон: {
+    descriptionKey: 'models.i-i-s-umnyjj-dom-тариф.validations.датаОкон.__caption__',
     validators: [
       validator('ds-error'),
       validator('date'),
@@ -81,32 +81,12 @@ export let defineProjections = function (modelClass) {
   modelClass.defineProjection('ТарифE', 'i-i-s-umnyjj-dom-тариф', {
     наименование: attr('Наименование', { index: 0 }),
     описание: attr('Описание', { index: 1 }),
-    датаНачала: attr('Дата начала', { index: 2 }),
-    датаОкончания: attr('Дата окончания', { index: 3 }),
-    единица: attr('Единица', { index: 4 }),
-    формула: attr('Формула', { index: 5 }),
-    стоимость: attr('Стоимость', { index: 6 }),
-    видУслуги: belongsTo('i-i-s-umnyjj-dom-вид-услуги', 'Вид услуги', {
-      наименование: attr('Наименование', { index: 8 })
-    }, { index: 7 }),
-    поставщик: belongsTo('i-i-s-umnyjj-dom-поставщик', 'Поставщик', {
-      иНН: attr('ИНН', { index: 10 })
-    }, { index: 9 })
+    датаНачала: attr('Дата начала', { index: 2 })
   });
 
   modelClass.defineProjection('ТарифL', 'i-i-s-umnyjj-dom-тариф', {
     наименование: attr('Наименование', { index: 0 }),
     описание: attr('Описание', { index: 1 }),
-    датаНачала: attr('Дата начала', { index: 2 }),
-    датаОкончания: attr('Дата окончания', { index: 3 }),
-    единица: attr('Единица', { index: 4 }),
-    формула: attr('Формула', { index: 5 }),
-    стоимость: attr('Стоимость', { index: 6 }),
-    видУслуги: belongsTo('i-i-s-umnyjj-dom-вид-услуги', 'Наименование', {
-      наименование: attr('Наименование', { index: 7 })
-    }, { index: -1, hidden: true }),
-    поставщик: belongsTo('i-i-s-umnyjj-dom-поставщик', 'ИНН', {
-      иНН: attr('ИНН', { index: 8 })
-    }, { index: -1, hidden: true })
+    датаНачала: attr('Дата начала', { index: 2 })
   });
 };

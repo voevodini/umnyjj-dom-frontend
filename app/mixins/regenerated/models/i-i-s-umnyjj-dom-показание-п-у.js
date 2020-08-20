@@ -7,7 +7,7 @@ import { attr, belongsTo, hasMany } from 'ember-flexberry-data/utils/attributes'
 export let Model = Mixin.create({
   значение: DS.attr('number'),
   дата: DS.attr('date'),
-  полученоАвтоматически: DS.attr('boolean'),
+  полученоАвто: DS.attr('boolean'),
   приборУчета: DS.belongsTo('i-i-s-umnyjj-dom-прибор-учета', { inverse: null, async: false })
 });
 
@@ -26,8 +26,8 @@ export let ValidationRules = {
       validator('date'),
     ],
   },
-  полученоАвтоматически: {
-    descriptionKey: 'models.i-i-s-umnyjj-dom-показание-п-у.validations.полученоАвтоматически.__caption__',
+  полученоАвто: {
+    descriptionKey: 'models.i-i-s-umnyjj-dom-показание-п-у.validations.полученоАвто.__caption__',
     validators: [
       validator('ds-error'),
     ],
@@ -44,19 +44,11 @@ export let ValidationRules = {
 export let defineProjections = function (modelClass) {
   modelClass.defineProjection('ПоказаниеПУE', 'i-i-s-umnyjj-dom-показание-п-у', {
     значение: attr('Значение', { index: 0 }),
-    дата: attr('Дата', { index: 1 }),
-    полученоАвтоматически: attr('Получено автоматически', { index: 2 }),
-    приборУчета: belongsTo('i-i-s-umnyjj-dom-прибор-учета', 'Прибор учета', {
-      единица: attr('Единица', { index: 4 })
-    }, { index: 3 })
+    дата: attr('Дата', { index: 1 })
   });
 
   modelClass.defineProjection('ПоказаниеПУL', 'i-i-s-umnyjj-dom-показание-п-у', {
     значение: attr('Значение', { index: 0 }),
-    дата: attr('Дата', { index: 1 }),
-    полученоАвтоматически: attr('Получено автоматически', { index: 2 }),
-    приборУчета: belongsTo('i-i-s-umnyjj-dom-прибор-учета', 'Единица', {
-      единица: attr('Единица', { index: 3 })
-    }, { index: -1, hidden: true })
+    дата: attr('Дата', { index: 1 })
   });
 };
